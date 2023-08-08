@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gemunu+Libre:wght@500&family=PT+Sans:ital@1&display=swap");
+
+* {
+    font-family: "Gemunu Libre", "Times New Roman", Times, serif;
+    box-sizing: border-box;
+}
+
+nav {
+    background-image: linear-gradient(to bottom, #7c7575, #7f797b, #817d80, #828185, #848589, #85878b, #858a8d, #868c8f, #858d8f, #858d8f, #848e8f, #848e8e);
+}
+
+body {
+    background-color: #7f797b;
+}
+
+.buttonCW {
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+    border-color: #686767;
+    background-color: #a5a6ac;
+}
+
+.buttonCW:hover {
+    box-shadow: 0px 0px 10px 0px;
+    border-color: white;
+    background-color: #a5a6ac;
+}
+
+.navLink {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
+
+.navLink:hover {
+    background-color: lightgray;
+    color: black;
+}

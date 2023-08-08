@@ -1,12 +1,12 @@
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
-import Nav from "../src/components/nav/Nav";
 function App() {
   return (
-    <div className="container">
-      <Nav
-        imageLogo="https://i.postimg.cc/prY6SW5x/isologotipo-imprimir-opcion-1.png"
-      />
-    </div>
+    <div>
+      <NavBar />
+      <ItemListContainer greeting="HOLA MUNDO" />
+     </div>
   );
 }
 
