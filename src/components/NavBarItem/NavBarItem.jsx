@@ -1,13 +1,15 @@
+import {NavLink} from "react-router-dom";
+
 const NavBarItem = () => {
-    const menuItems = ["HOME", "PRODUCTOS", "SEGURIDAD", "CONTACTOS"];
+    const menuItems = ["Alarmas", "Video", "Accesos", "Complementos", "Incendio"];
   
     return (
       <ul className="navbar-nav me-auto">
         {menuItems.map((menuItem, index) => (
           <li key={index} className="nav-item">
-            <a className="navbar-brand navLink" href="#">
+            <NavLink className="navbar-brand navLink" to={`/category/${menuItem}`} activeClassName="active">
               {menuItem}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
