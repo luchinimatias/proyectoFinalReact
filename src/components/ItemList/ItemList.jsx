@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
+import styles from "./ItemList.module.css";
 
 const ItemList = ({ items, isLoading }) => {
   if (isLoading) {
@@ -7,15 +8,22 @@ const ItemList = ({ items, isLoading }) => {
   }
 
   return (
-    <div>
-      <ul>
+    <div className={styles["contenedor"]}>
+      <ul className={styles["contenedor-items"]}>
         {items.map((item) => (
-          <li key={item.id}>
-            <h2>{item.name}</h2>
-            <p>{item.description}</p>
-            <p>${item.price}</p>
-            <p>{item.category}</p>
-            <img src={"../src/assets/img/" + item.img} alt={item.name} />
+          <li key={item.id} className={styles["item"]}>
+            <div className={styles["item-inner"]}>
+              <span className={styles["titulo-item"]}>{item.name}</span>
+              <img
+                src={"../src/assets/img/" + item.img}
+                alt={item.name}
+                className={styles["img-item"]}
+              />
+              <span className={styles["precio-item"]}>${item.price}</span>
+              <span className={styles["categoria-item"]}>{item.category}</span>
+
+              <button className={styles["boton-item"]}>Agregar al Carrito</button>
+            </div>
           </li>
         ))}
       </ul>

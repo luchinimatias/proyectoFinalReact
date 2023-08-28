@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getProducts } from "../../services";
 import ItemList from "../ItemList/ItemList";
 
+
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
