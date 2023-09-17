@@ -57,9 +57,14 @@
     text-align: center;
     text-transform: uppercase;
     padding: 10px;
-    font-size: 30px;
+    font-size: 39px;
   }
 
+  .item .description-item {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+  }
     
   .item .precio-item {
     display: block;

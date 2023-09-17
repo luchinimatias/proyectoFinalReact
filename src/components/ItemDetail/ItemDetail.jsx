@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 import styles from "./ItemDetail.module.css";
 
-const ItemDetail = ({ item, isLoading }) => {
+const ItemDetail = ({ item, isLoading, addItem}) => {
   if (isLoading) {
     return <LoadingIndicator />;
   }
@@ -15,11 +15,12 @@ const ItemDetail = ({ item, isLoading }) => {
     <div className={styles["contenedor"]}>
       <ul className={styles["contenedor-items"]}>
       <li key={item.id} className={styles["item"]}>
-        <img src={"../src/assets/img/" + item.img} alt={item.name} className={styles["img-item"]}/>
-        <span className={styles["titulo-item"]}>{item.name}</span>
+        <img src={"../src/assets/img/" + item.imageId} alt={item.title} className={styles["img-item"]}/>
+        <span className={styles["titulo-item"]}>{item.title}</span>
+        <span className={styles["description-item"]}>{item.description}</span>
         <span className={styles["precio-item"]}>${item.price}</span>
-        <span className={styles["categoria-item"]}>{item.category}</span>
-        <button className={styles["boton-item"]}>Agregar al Carrito</button>
+        <span className={styles["categoria-item"]}>{item.categoryId}</span>
+        <button className={styles["boton-item"]} onClick={() => addItem(item, 1)}>Agregar al Carrito</button>
         </li>
       </ul>
     </div>
@@ -29,6 +30,7 @@ const ItemDetail = ({ item, isLoading }) => {
 ItemDetail.propTypes = {
   item: PropTypes.object,
   isLoading: PropTypes.bool.isRequired,
+  addItem: PropTypes.func,
 };
 
 export default ItemDetail;
