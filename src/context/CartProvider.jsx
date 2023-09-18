@@ -11,10 +11,6 @@ const CartProvider = ({ children }) => {
   };
 
   const addItem = (product, quantity) => {
-    // item ya existe en cart?
-    // si existe, sumar quantity
-    // si no existe, agregar item a cart
-
     const itemInCart = isInCart(product.id);
 
     if (itemInCart) {
@@ -25,12 +21,10 @@ const CartProvider = ({ children }) => {
             quantity: item.quantity + quantity,
           };
         }
-
         return item;
       });
       setCart(newCart);
     } else {
-      // agregar item a cart
       setCart([...cart, { ...product, quantity }]);
     }
   };
@@ -40,13 +34,35 @@ const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
+  const removeOneItem = (id) => {
+    const itemToRemove = cart.find((item) => item.id === id);
+
+    if (itemToRemove) {
+      if (itemToRemove.quantity > 1) {
+        const newCart = cart.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              quantity: item.quantity - 1,
+            };
+          }
+          return item;
+        });
+        setCart(newCart);
+      } else {
+        const newCart = cart.filter((item) => item.id !== id);
+        setCart(newCart);
+      }
+    }
+  };
+
   const clear = () => {
     setCart([]);
   };
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart }}
+      value={{ cart, addItem, removeItem, removeOneItem, clear, isInCart }}
     >
       {children}
     </CartContext.Provider>

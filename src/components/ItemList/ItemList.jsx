@@ -16,17 +16,16 @@ const ItemList = ({ items, isLoading }) => {
           <li key={item.id} className={styles["item"]}>
             <div className={styles["item-inner"]}>
               <span className={styles["titulo-item"]}>{item.title}</span>
-              <Link to={`/item/${item.id}`}>
               <img
                 src={"../src/assets/img/" + item.imageId}
                 alt={item.title}
                 className={styles["img-item"]}
               />
-              </Link>
               <span className={styles["precio-item"]}>${item.price}</span>
               <span className={styles["categoria-item"]}>{item.categoryId}</span>
-
-              <button className={styles["boton-item"]}>Agregar al Carrito</button>
+              <Link to={`/item/${item.id}`} className={styles["button-container"]}>
+                    <i className={`bi bi-info-square ${styles["boton-item"]}`}>   Producto</i>
+              </Link>
             </div>
           </li>
         ))}
