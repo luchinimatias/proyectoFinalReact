@@ -79,28 +79,22 @@
   }
   
 
-.item .button-container {
-  display: block;
-  text-align: center;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-.item .boton-item {
-  border-radius: 20px 0px 20px 0px;
-  border-color: #686767;
-  display: block;
-  margin: 10px auto;
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  color: black;
-  background-color: #a5a6ac;
-  font-style: normal;
-}
-
-.item .boton-item:hover {
-  box-shadow: 0px 0px 10px 0px;
-  color: white;
-  background-color: #a5a6ac;
-}
+  .item .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .boton-item {
+    display: inline;
+    font-size: 15px;
+    color: white;
+    padding: 3px;
+    cursor: pointer;
+  }
+  
+  .boton-item:hover {
+    box-shadow: 0px 0px 10px 0px;
+    color: white;
+    background-color: #a5a6ac;
+  }

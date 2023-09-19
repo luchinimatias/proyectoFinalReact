@@ -41,7 +41,7 @@ const Cart = () => {
                     onClick={() => { removeOneItem(item.id); }}
                   />
                   <Link to={`/item/${item.id}`}>
-                    <i className={`bi bi-arrow-90deg-left ${styles["boton-item"]}`}></i>
+                    <i className={`bi bi-info-square ${styles["boton-item"]}`}></i>
                   </Link>
                   <i
                     className={`bi bi-plus-square ${styles["boton-item"]}`}
@@ -62,6 +62,7 @@ const Cart = () => {
         <div>
           <strong >Total Price: ${getCartTotal(cart)}</strong>
           <button className={styles["botonB"]} onClick={handleClearCart}>Borrar</button>
+          <Link to="/Checkout">Ir a finalizar compra</Link>
         </div>
       )}
 
