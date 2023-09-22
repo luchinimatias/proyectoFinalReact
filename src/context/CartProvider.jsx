@@ -30,14 +30,13 @@ const CartProvider = ({ children }) => {
   };
 
   const removeItem = (id) => {
-    
     const newCart = cart.filter((item) => item.id !== id);
     setCart(newCart);
   };
 
   const removeOneItem = (id) => {
     const itemToRemove = cart.find((item) => item.id === id);
-
+    console.log(id);
     if (itemToRemove) {
       if (itemToRemove.quantity > 1) {
         const newCart = cart.map((item) => {

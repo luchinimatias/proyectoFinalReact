@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .invoice {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 120px); /* Resta la altura del navbar y el footer */
+    overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+  }
+
+  .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.title {
+  font-size: 24px;
+}
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .date {
+    font-size: 14px;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px; /* Añade un espacio arriba */
+  }
+  
+  .customerInfo {
+    margin-top: 20px;
+  }
+  
+  .inputWithIcon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%; /* Cambia el ancho al 100% para que sea más corto */
+    max-width: 300px; /* Establece un ancho máximo para evitar que sea demasiado ancho */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .productList {
+    margin-top: 20px;
+  }
+  
+  .productTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .productRow {
+    border-top: 1px solid #ccc;
+  }
+  
+  .productRow th,
+  .productRow td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .total {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .checkoutButton {
+    display: block;
+    margin: 20px auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .orderId {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }

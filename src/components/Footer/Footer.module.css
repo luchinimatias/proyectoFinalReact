@@ -1,0 +1,31 @@
+.contenedorBanner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0; /* Agrega un espacio superior e inferior */
+    background-color: #333; /* Ajusta el color de fondo del footer */
+  }
+    .img {
+      padding-top: 1px;
+      padding-left: 1px;
+      padding-bottom: 1px;
+      padding-right: 1px;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem; 
+      color: white;
+      font-size: 20px;
+    }
+    .text
+    {
+        color: white;
+    }
+
+    .img:hover
+    {
+        box-shadow: 0px 0px 10px 0px;
+        color: white;
+        background-color: #a5a6ac;
+    }
+

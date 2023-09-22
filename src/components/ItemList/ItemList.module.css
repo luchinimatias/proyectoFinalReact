@@ -4,14 +4,10 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    /* oculto lo que queda fuera del .contenedor */
     contain: paint;
-    border: 1px solid #666;
-    border-radius: 20px 20px 20px 20px;
+    min-height: 80vh;
 }
 
-
-/* SECCION CONTENEDOR DE ITEMS */
 .contenedor-items {
     margin-top: 30px;
     display: grid;

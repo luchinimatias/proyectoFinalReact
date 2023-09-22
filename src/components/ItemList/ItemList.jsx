@@ -3,7 +3,7 @@ import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 import styles from "./ItemList.module.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import CartContext from "../../context/CartContext"; // Importa CartContext aquí
+import CartContext from "../../context/CartContext";
 
 const ItemList = ({ items, isLoading }) => {
   const { addItem, removeOneItem } = useContext(CartContext);

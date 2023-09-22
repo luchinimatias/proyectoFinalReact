@@ -12,8 +12,8 @@ const NavBar = () => {
           <img src="https://i.postimg.cc/prY6SW5x/isologotipo-imprimir-opcion-1.png" alt="Logo" width="180" height="100" className="d-inline-block align-text-top animate__animated animate__bounce animate__delay-2s" />
         </Link>
 
-        <NavBarItem /> {/* Renderiza el componente NavBarItem */}
-
+        <NavBarItem /> {}
+        
         <CartWidget />
       </div>
     </nav>

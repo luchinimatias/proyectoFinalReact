@@ -19,7 +19,7 @@ const Cart = () => {
     <div className={styles["contenedor"]}>
 
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <i className={`bi bi-cart-x ${styles["cart-x"]}`}>Tu carrito esta vacío.</i>
       ) : (
         <ul className={styles["contenedor-items"]}>
           {cart.map((item) => (
@@ -57,15 +57,19 @@ const Cart = () => {
           ))}
         </ul>
       )}
-
       {cart.length > 0 && (
         <div>
-          <strong >Total Price: ${getCartTotal(cart)}</strong>
-          <button className={styles["botonB"]} onClick={handleClearCart}>Borrar</button>
-          <Link to="/Checkout">Ir a finalizar compra</Link>
+          <div>
+            <strong className={`${styles["text"]}`}>Total Price: ${getCartTotal(cart)}</strong>
+          </div>
+          <div>
+            <i className={`bi bi-cart-x ${styles["boton-item1"]}`} onClick={handleClearCart}/>
+            <Link to="/Checkout">
+              <i className={`bi bi-cart-check ${styles["boton-item1"]}`}></i>
+            </Link>
+          </div>
         </div>
       )}
-
     </div>
   );
 };

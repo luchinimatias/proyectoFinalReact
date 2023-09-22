@@ -3,13 +3,10 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    /* oculto lo que queda fuera del .contenedor */
     contain: paint;
-    border: 1px solid #666;
-    border-radius: 20px 20px 20px 20px;
+    min-height: 80vh;
 }
 
-/* SECCION CONTENEDOR DE ITEMS */
 .contenedor-items {
     margin-top: 30px;
     display: grid;
@@ -77,20 +74,21 @@
     text-align: center;
     font-size: 15px;
   }
-
-  .item .boton-item {
-    border-radius: 0px 20px 0px 20px;
-    border-color: #686767;
-    display: block;
-    margin: 10px auto;
-    border: none;
-    padding: 5px 15px;
-    cursor: pointer;
-    color: black;
-    background-color: #a5a6ac;
+  .item .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
   }
   
-  .item .boton-item:hover {
+  .boton-item {
+    display: inline;
+    font-size: 35px;
+    color: white;
+    padding: 3px;
+    cursor: pointer;
+  }
+  
+  .boton-item:hover {
     box-shadow: 0px 0px 10px 0px;
     color: white;
     background-color: #a5a6ac;
