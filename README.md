@@ -14,11 +14,7 @@ Nuestro proyecto se centra en la venta de soluciones de seguridad en línea. Som
 1. [Introducción](#introducción) 
 2. [Requisitos previos](#requisitos-previos) 
 3. [Instalación](#instalación) 
-4. [Uso](#uso)
-5. [Configuración](#configuración) 
-6. [Contribución](#contribución) 
-7. [Licencia](#licencia)
-8. [Contacto](#contacto)
+
 
 ### Requisitos previos
 
