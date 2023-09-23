@@ -9,12 +9,12 @@ import './index.css'
 
 //todo: poner en un archivo separado .env despues
 const firebaseConfig = {
-  apiKey: "AIzaSyAnEtXqQ3Ka1pzrMocUvNU5LZpE8bcj7ZI",
-  authDomain: "iptecnology.firebaseapp.com",
-  projectId: "iptecnology",
-  storageBucket: "iptecnology.appspot.com",
-  messagingSenderId: "786253216289",
-  appId: "1:786253216289:web:61f4ab691bccdc3cf24160"
+  apiKey: import.meta.env.VITE_FIRESTORE_API_KEY,
+  authDomain: import.meta.env.VITE_FIRESTORE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIRESTORE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIRESTORE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIRESTORE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIRESTORE_APP_ID,
 };
 
 initializeApp(firebaseConfig);
